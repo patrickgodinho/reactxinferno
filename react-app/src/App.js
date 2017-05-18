@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, IndexRoute } from "react-router-dom";
 import "bulma/css/bulma.css";
 import Tabs from "./tabs";
 import Texto from "./texto";
 import Json from "./json";
 import Imagem from "./imagem";
+import Main from './main';
 
 class App extends Component {
   constructor() {
@@ -12,6 +13,13 @@ class App extends Component {
     this.state = {
       active: '',
       rotas: [
+                {
+          to: "/",
+          onClick: () => this.setState({ ...this.state, active: "" }),
+          label: "Home",
+          component: Main,
+          name: ''
+        },
         {
           to: "/texto",
           onClick: () => this.setState({ ...this.state, active: "texto" }),

@@ -6,6 +6,7 @@ import Tabs from "./tabs";
 import Texto from './texto';
 import App from "./App";
 import rotas from './rotas';
+import Main from './main'
 
 const browserHistory = createBrowserHistory();
 
@@ -19,7 +20,7 @@ const renderLinks = () => {
 const routes = (
   <Router history={browserHistory}>
     <Route component={App}>
-      <IndexRoute component={ Texto }/>
+      <IndexRoute component={ Main }/>
       {renderLinks()}
     </Route>
   </Router>

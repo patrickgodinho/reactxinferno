@@ -1,8 +1,8 @@
-import Inferno from 'inferno'
-import Component from 'inferno-component';
+import Inferno from "inferno";
+import Component from "inferno-component";
 import Bench from "./bench";
 import dados from "./dados/exemplo";
-import Table from "./tableTexto";
+import Table from "./table";
 
 const bench = new Bench();
 const TIMES = 15;
@@ -14,7 +14,7 @@ class Texto extends Component {
     this.count = 1;
     this.totalLoad = 0;
   }
-    onClear = e => {
+  onClear = e => {
     this.setState(dados.clear());
   };
 
@@ -66,7 +66,11 @@ class Texto extends Component {
           Limpar
         </a>
 
-        <Table data={this.state.dados} />
+        <Table
+          data={this.state.dados}
+          headers={["Idade", "Nome", "Email"]}
+          keys={["age", "name", "email"]}
+        />
       </div>
     );
   }

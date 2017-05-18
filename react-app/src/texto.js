@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Bench from "./bench";
 import dados from "./dados/exemplo";
-import Table from "./tableTexto";
+import Table from "./table";
 
 const bench = new Bench();
 const TIMES = 15;
@@ -65,7 +65,7 @@ class Texto extends Component {
           Limpar
         </a>
 
-        <Table data={this.state.dados} />
+        <Table data={this.state.dados} headers={['Idade', 'Nome', 'Email']} keys={['age', 'name', 'email']}/>
       </div>
     );
   }

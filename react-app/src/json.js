@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Bench from "./bench";
 import dados from "./dados/paises";
-import Table from "./tableJson";
+import Table from "./table";
 
 const bench = new Bench();
 const TIMES = 15;
@@ -71,7 +71,7 @@ class Json extends Component {
           Limpar
         </a>
 
-        <Table data={this.state.dados} />
+        <Table data={this.state.dados} headers={['Nome', 'Código']} keys={['name', 'code']} />
       </div>
     );
   }

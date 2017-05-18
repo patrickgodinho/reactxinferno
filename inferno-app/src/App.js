@@ -1,22 +1,20 @@
-import { version } from 'inferno';
-import Component from 'inferno-component';
-import Logo from './logo';
-import './App.css';
+import Inferno from "inferno";
+import "bulma/css/bulma.css";
+import Tabs from "./tabs";
+import Texto from "./texto";
+import Json from "./json";
+import Imagem from "./imagem";
+import rotas from './rotas';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <Logo width="80" height="80" />
-          <h2>{`Welcome to Inferno ${version}`}</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+const App = (props) => {
+  return (
+    <div>
+      <Tabs rotas={rotas} />
+      <div className="content columns">
+        {props.children}
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default App;

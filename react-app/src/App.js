@@ -6,6 +6,9 @@ import Texto from "./texto";
 import Json from "./json";
 import Imagem from "./imagem";
 import Main from './main';
+import Bench from './bench'
+
+const bench = new Bench();
 
 class App extends Component {
   constructor() {
@@ -51,7 +54,12 @@ class App extends Component {
     );
   }
 
+  componentDidMount () {
+    bench.stop();
+  }
+  
   render() {
+    bench.start('Aplicação');
     return (
       <Router>
         <div>

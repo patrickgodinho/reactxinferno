@@ -1,5 +1,3 @@
-import Inferno from "inferno";
-
 const Table = props => {
   return (
     <table className="table">

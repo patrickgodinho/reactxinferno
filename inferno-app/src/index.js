@@ -1,9 +1,7 @@
-import Inferno, { render } from "inferno";
+import { render } from "inferno";
 import { Router, Route, IndexRoute } from "inferno-router";
 import createBrowserHistory from 'history/createBrowserHistory';
 import "bulma/css/bulma.css";
-import Tabs from "./tabs";
-import Texto from './texto';
 import App from "./App";
 import rotas from './rotas';
 import Main from './main'

@@ -1,8 +1,15 @@
 import Texto from "./texto";
 import Json from "./json";
 import Imagem from "./imagem";
+import Main from "./main";
 
 const rotas = [
+  {
+    to: "/",
+    label: "Home",
+    component: Main,
+    name: ""
+  },
   {
     to: "/texto",
     label: "TEXTO",

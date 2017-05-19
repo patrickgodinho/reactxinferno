@@ -1,5 +1,3 @@
-import Inferno from "inferno";
-
 const Main = () => {
   return (
     <div className="column is-12">
